@@ -72,8 +72,12 @@ module testbench();
         else                 $display("COUNT DOWN OVERFLOW: [FAIL]");
         rst_n = 1'b0;
 
-        $display("COUNTER TEST DONE");
+        test_change(5, 5, 1);
+        rst_n = 1'b0; 
+        test_change(7, 7, 0);
+        rst_n = 1'b0;   
 
+        $display("COUNTER TEST DONE");
         #5000
         $finish;
     end
@@ -117,6 +121,40 @@ module testbench();
 
             if(up_down) $display("COUNT UP TEST: %4d times, %s", time_count, (time_count == count) ? "[PASS]" : "[FAIL]");
             else        $display("COUNT DOWN TEST: %4d times, %s", time_count, ((16 - time_count) == count) ? "[PASS]" : "[FAIL]");
+        end
+    endtask
+
+    task test_change;
+        input signed [31:0] time_up; // Verilog không hỗ trợ int, dùng [31:0] thay thế
+        input signed [31:0] time_down;
+        input up_down;
+        integer i;
+        begin
+            rst_n = 1'b0;
+            repeat(3) @(posedge clk);
+            #1
+            sel   = up_down;
+            rst_n = 1'b1;
+            
+            if(up_down) repeat(2) @(posedge clk);
+            else #0;
+
+            $display("VALUE: %b", count);    
+            repeat(2) @(posedge clk);
+
+            for (i = 0; i < time_up; i = i + 1) begin
+                @(posedge clk);
+                $display("VALUE: %b", count);      
+            end
+            
+            sel   = ~up_down;
+
+            repeat(2) @(posedge clk);
+            for (i = 0; i < time_down; i = i + 1) begin
+                @(posedge clk);
+                $display("VALUE: %b", count);      
+            end
+            
         end
     endtask
 

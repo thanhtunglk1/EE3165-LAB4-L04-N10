@@ -53,6 +53,7 @@
 1714635238 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__nor3b_2.timing.v
 1714635238 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__einvn_0.timing.v
 1714635240 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__or2b_1.timing.v
+1747061373 /home/admin/Mount/EE3165-LAB4/EE3165-LAB4-L04-N10/00_src/synth_wrapper.v
 1714635240 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__nor4_1.timing.v
 1714635238 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__lpflow_decapkapwr_6.timing.v
 1714635238 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__fill_8.timing.v
@@ -292,6 +293,7 @@
 1714635236 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__and4bb_1.timing.v
 1714635240 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__o22a_1.timing.v
 1714635236 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__dfxbp_1.timing.v
+1747309915 /home/admin/Mount/EE3165-LAB4/EE3165-LAB4-L04-N10/01_tb/testbench.v
 1714635240 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__o21ai_2.timing.v
 1714635238 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__mux4_1.timing.v
 1714635240 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__o22ai_4.timing.v
@@ -356,9 +358,11 @@
 1714635236 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__a31o_1.timing.v
 1714635238 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__dlygate4sd2_1.timing.v
 1714635236 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__dlrtp_4.timing.v
+1747064754 /home/admin/Mount/EE3165-LAB4/EE3165-LAB4-L04-N10/00_src/cla_4bit.v
 1714635240 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__o2bb2ai_4.timing.v
 1714635236 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__dfstp_2.timing.v
 1714635236 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__and3_4.timing.v
+1747061415 /home/admin/Mount/EE3165-LAB4/EE3165-LAB4-L04-N10/00_src/counter_4bit.v
 1714635240 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__o22a_4.timing.v
 1714635236 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__and4bb_4.timing.v
 1714635236 /home/admin/Mount/synthesis/02_sim/cells_timing/gates/sky130_fd_sc_hd__dlrtn_1.timing.v

@@ -4,8 +4,6 @@
 //
 +xm64bit
 +access+rcw
--DELAY_MODE
-punit
 -timescale
 1ns/10ps
 -ACCESS
