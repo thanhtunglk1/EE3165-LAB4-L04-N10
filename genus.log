@@ -5,7 +5,7 @@ of Cadence Design Systems, Inc. in the United States and other countries.
 
 Version: GENUS15.20 - 15.20-p004_1, built Sat Nov 14 2015
 Options: -files ./03_synth/genus_shell.tcl 
-Date:    Mon May 12 12:46:53 2025
+Date:    Sat May 17 05:37:45 2025
 Host:    centos7 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (3*12th Gen Intel(R) Core(TM) i5-12500H 18432KB)
 OS:      CentOS Linux release 7.9.2009 (Core)
 
@@ -166,7 +166,7 @@ Info    : Elaborating Design. [ELAB-1]
 Info    : Done Elaborating Design. [ELAB-3]
         : Done elaborating 'synth_wrapper'.
 UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:             3              3                                      elaborate
+UM:             3              4                                      elaborate
   Checking the design.
 
  	 Check Design Report
@@ -227,14 +227,14 @@ No constant sequential pin(s) in design 'synth_wrapper'
 
 design 'synth_wrapper' has the following constant input hierarchical pin(s)
 hpin:synth_wrapper/mux_sel_reg_14_12/in_1 	 (fanout : 1)
-hpin:synth_wrapper/mux_count_14_12/in_1[0] 	 (fanout : 1)
-hpin:synth_wrapper/mux_count_14_12/in_1[1] 	 (fanout : 1)
-hpin:synth_wrapper/mux_count_14_12/in_1[2] 	 (fanout : 1)
-hpin:synth_wrapper/mux_count_14_12/in_1[3] 	 (fanout : 1)
-hpin:synth_wrapper/counter_4bit/mux_p_count_19_12/in_1[0] 	 (fanout : 1)
-hpin:synth_wrapper/counter_4bit/mux_p_count_19_12/in_1[1] 	 (fanout : 1)
-hpin:synth_wrapper/counter_4bit/mux_p_count_19_12/in_1[2] 	 (fanout : 1)
-hpin:synth_wrapper/counter_4bit/mux_p_count_19_12/in_1[3] 	 (fanout : 1)
+hpin:synth_wrapper/mux_count_24_12/in_1[0] 	 (fanout : 1)
+hpin:synth_wrapper/mux_count_24_12/in_1[1] 	 (fanout : 1)
+hpin:synth_wrapper/mux_count_24_12/in_1[2] 	 (fanout : 1)
+hpin:synth_wrapper/mux_count_24_12/in_1[3] 	 (fanout : 1)
+hpin:synth_wrapper/counter/mux_p_count_19_12/in_1[0] 	 (fanout : 1)
+hpin:synth_wrapper/counter/mux_p_count_19_12/in_1[1] 	 (fanout : 1)
+hpin:synth_wrapper/counter/mux_p_count_19_12/in_1[2] 	 (fanout : 1)
+hpin:synth_wrapper/counter/mux_p_count_19_12/in_1[3] 	 (fanout : 1)
 Total number of constant hierarchical pins in design 'synth_wrapper' : 9
 
 No constant connected ports in design 'synth_wrapper'
@@ -792,7 +792,7 @@ Info    : Done optimizing RTL. [RTLOPT-2]
 Info    : Done synthesizing. [SYNTH-2]
         : Done synthesizing 'synth_wrapper' to generic gates.
      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:             0              1                                      syn_generic
+UM:             1              0                                      syn_generic
 Current PLE settings:
 
 Aspect ratio        : 1.00
@@ -845,7 +845,7 @@ Multi-threaded Virtual Mapping    (8 threads, 8 of 12 CPUs usable)
 Global mapping target info
 ==========================
 Cost Group 'default' target slack:    24 ps
-Target path end-point (Pin: counter_4bit/p_count_reg[2]/d)
+Target path end-point (Pin: counter/p_count_reg[2]/d)
 
 Multi-threaded Technology Mapping (8 threads, 8 of 12 CPUs usable)
  
@@ -856,7 +856,7 @@ Global mapping status
 Operation                   Area  Neg Slk Worst Path
 -------------------------------------------------------------------------------
  global_map                  518      -22  sel_reg_reg/CLK -->
-                                             counter_4bit/p_count_reg[3]/D
+                                             counter/p_count_reg[3]/D
 
     Cost Group            Target    Slack    Clock
 --------------------------------------------------
@@ -866,7 +866,7 @@ Operation                   Area  Neg Slk Worst Path
 Global incremental target info
 ==============================
 Cost Group 'default' target slack:   -22 ps
-Target path end-point (Pin: counter_4bit/p_count_reg[1]/D (sky130_fd_sc_hd__dfrtp_2/D))
+Target path end-point (Pin: counter/p_count_reg[1]/D (sky130_fd_sc_hd__dfrtp_2/D))
 
  
 Global incremental optimization status
@@ -875,8 +875,8 @@ Global incremental optimization status
                            Total  Weighted
 Operation                   Area  Neg Slk Worst Path
 -------------------------------------------------------------------------------
- global_incr                 496      -18  counter_4bit/p_count_reg[1]/CLK -->
-                                             counter_4bit/p_count_reg[3]/D
+ global_incr                 496      -18  counter/p_count_reg[1]/CLK -->
+                                             counter/p_count_reg[3]/D
 
     Cost Group            Target    Slack    Clock
 --------------------------------------------------
@@ -885,7 +885,7 @@ Operation                   Area  Neg Slk Worst Path
 Info    : Done mapping. [SYNTH-5]
         : Done mapping 'synth_wrapper'.
      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:             1              0            -37 ps          -18.4 ps  syn_map
+UM:             0              1            -37 ps          -18.4 ps  syn_map
 Current PLE settings:
 
 Aspect ratio        : 1.00
@@ -943,17 +943,13 @@ Incremental optimization status
 Operation                   Area  Neg Slk     Slack    Trans      Cap 
 -------------------------------------------------------------------------------
  init_iopt                   496      -18       -37         0        0
-            Path: counter_4bit/p_count_reg[1]/CLK -->
-                    counter_4bit/p_count_reg[3]/D
+            Path: counter/p_count_reg[1]/CLK --> counter/p_count_reg[3]/D
  const_prop                  496      -18       -37         0        0
-            Path: counter_4bit/p_count_reg[1]/CLK -->
-                    counter_4bit/p_count_reg[3]/D
+            Path: counter/p_count_reg[1]/CLK --> counter/p_count_reg[3]/D
  simp_cc_inputs              494      -18       -18         0        0
-            Path: counter_4bit/p_count_reg[1]/CLK -->
-                    counter_4bit/p_count_reg[3]/D
+            Path: counter/p_count_reg[1]/CLK --> counter/p_count_reg[3]/D
  hi_fo_buf                   494      -18       -18         0        0
-            Path: counter_4bit/p_count_reg[1]/CLK -->
-                    counter_4bit/p_count_reg[3]/D
+            Path: counter/p_count_reg[1]/CLK --> counter/p_count_reg[3]/D
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
@@ -967,11 +963,9 @@ Incremental optimization status
 Operation                   Area  Neg Slk     Slack    Trans      Cap 
 -------------------------------------------------------------------------------
  init_delay                  494      -18       -18         0        0
-            Path: counter_4bit/p_count_reg[1]/CLK -->
-                    counter_4bit/p_count_reg[3]/D
+            Path: counter/p_count_reg[1]/CLK --> counter/p_count_reg[3]/D
  incr_delay                  512       -4        -7         0        0
-            Path: counter_4bit/p_count_reg[1]/CLK -->
-                    counter_4bit/p_count_reg[3]/D
+            Path: counter/p_count_reg[1]/CLK --> counter/p_count_reg[3]/D
  incr_delay                  510        0         0         0        0
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
@@ -990,7 +984,7 @@ Operation                   Area  Neg Slk     Slack    Trans      Cap
             fopt        11  (        0 /        0 )  0.00
        crit_swap        11  (        0 /        0 )  0.00
        mux2_swap        11  (        0 /        0 )  0.00
-       crit_dnsz        17  (        2 /        2 )  0.01
+       crit_dnsz        17  (        2 /        2 )  0.00
        load_swap        12  (        0 /        0 )  0.00
             fopt        12  (        0 /        0 )  0.00
         setup_dn        13  (        1 /        1 )  0.00
@@ -1473,7 +1467,7 @@ Info    : Done incrementally optimizing. [SYNTH-8]
 UM:             0              0             -0 ps            0.0 ps  syn_opt
 ============================================================
   Generated by:           Genus(TM) Synthesis Solution GENUS15.20 - 15.20-p004_1
-  Generated on:           May 12 2025  12:46:57 pm
+  Generated on:           May 17 2025  05:37:50 am
   Module:                 synth_wrapper
   Technology library:     sky130_fd_sc_hd__tt_025C_1v80 1.0000000000
   Operating conditions:   tt_025C_1v80 
@@ -1536,14 +1530,4 @@ Beginning report datapath command
 Warning : The filename, column and line number information will not be available in the report. [RPT_DP-100]
         : The attribute for getting HDL filename and line number is not set.
         : You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate) to enable filename, column, and line number tracking in the datapath report.
-WARNING: This version of the tool is 3467 days old.
-Error   : A required object parameter could not be found. [TUI-61] [what_is]
-        : An object named '' could not be found.
-        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
-  what_is: returns an object's type 
-
-Usage: get_object_type <object>
-
-    <object>:
-        object of interest 
-Normal exit.
+WARNING: This version of the tool is 3472 days old.

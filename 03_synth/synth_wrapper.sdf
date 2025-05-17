@@ -1,7 +1,7 @@
 (DELAYFILE
   (SDFVERSION  "OVI 3.0")
   (DESIGN      "synth_wrapper")
-  (DATE        "Mon May 12 12:46:57 -0400 2025")
+  (DATE        "Sat May 17 05:37:50 -0400 2025")
   (VENDOR      "Cadence, Inc.")
   (PROGRAM     "Genus(TM) Synthesis Solution")
   (VERSION     "GENUS15.20 - 15.20-p004_1")
@@ -12,7 +12,7 @@
   (TIMESCALE   1ps)
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__dfrtp_1")
-     (INSTANCE counter_4bit.p_count_reg\[3\])
+     (INSTANCE counter.p_count_reg\[3\])
      (DELAY
         (ABSOLUTE
           (PORT RESET_B (::0.0))
@@ -33,7 +33,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__dfrtp_1")
-     (INSTANCE counter_4bit.p_count_reg\[2\])
+     (INSTANCE counter.p_count_reg\[2\])
      (DELAY
         (ABSOLUTE
           (PORT RESET_B (::0.0))
@@ -54,7 +54,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__xnor2_1")
-     (INSTANCE counter_4bit.g1208)
+     (INSTANCE counter.g1208)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -66,7 +66,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__xnor2_1")
-     (INSTANCE counter_4bit.g1209)
+     (INSTANCE counter.g1209)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -78,7 +78,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__dfrtp_1")
-     (INSTANCE counter_4bit.p_count_reg\[1\])
+     (INSTANCE counter.p_count_reg\[1\])
      (DELAY
         (ABSOLUTE
           (PORT RESET_B (::0.0))
@@ -99,7 +99,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__nand2_2")
-     (INSTANCE counter_4bit.g1211)
+     (INSTANCE counter.g1211)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -111,7 +111,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__nand3_2")
-     (INSTANCE counter_4bit.g1212)
+     (INSTANCE counter.g1212)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -125,7 +125,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__nand2_1")
-     (INSTANCE counter_4bit.g1214)
+     (INSTANCE counter.g1214)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -137,7 +137,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__nand2_1")
-     (INSTANCE counter_4bit.g1215)
+     (INSTANCE counter.g1215)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -149,7 +149,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__inv_2")
-     (INSTANCE counter_4bit.g1216)
+     (INSTANCE counter.g1216)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -159,7 +159,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__nand2_1")
-     (INSTANCE counter_4bit.g1217)
+     (INSTANCE counter.g1217)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -171,7 +171,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__dfrtp_1")
-     (INSTANCE counter_4bit.p_count_reg\[0\])
+     (INSTANCE counter.p_count_reg\[0\])
      (DELAY
         (ABSOLUTE
           (PORT RESET_B (::0.0))
@@ -192,7 +192,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__nand2_1")
-     (INSTANCE counter_4bit.g1223)
+     (INSTANCE counter.g1223)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -204,7 +204,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__nand2_1")
-     (INSTANCE counter_4bit.g1225)
+     (INSTANCE counter.g1225)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -216,7 +216,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__inv_1")
-     (INSTANCE counter_4bit.g1227)
+     (INSTANCE counter.g1227)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -226,7 +226,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__clkinv_1")
-     (INSTANCE counter_4bit.g1231)
+     (INSTANCE counter.g1231)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -236,7 +236,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__inv_2")
-     (INSTANCE counter_4bit.g1232)
+     (INSTANCE counter.g1232)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -246,7 +246,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__xor2_1")
-     (INSTANCE counter_4bit.g1243)
+     (INSTANCE counter.g1243)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -258,7 +258,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__xor2_1")
-     (INSTANCE counter_4bit.g1245)
+     (INSTANCE counter.g1245)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -270,7 +270,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__inv_2")
-     (INSTANCE counter_4bit.g1262)
+     (INSTANCE counter.g1262)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -280,7 +280,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__nand2_1")
-     (INSTANCE counter_4bit.g1263)
+     (INSTANCE counter.g1263)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -292,7 +292,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__inv_4")
-     (INSTANCE counter_4bit.g1264)
+     (INSTANCE counter.g1264)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.1))
@@ -302,7 +302,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__nand2_2")
-     (INSTANCE counter_4bit.g1265)
+     (INSTANCE counter.g1265)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))
@@ -314,7 +314,7 @@
   )
   (CELL
      (CELLTYPE "sky130_fd_sc_hd__xnor3_1")
-     (INSTANCE counter_4bit.g1266)
+     (INSTANCE counter.g1266)
      (DELAY
         (ABSOLUTE
           (PORT A (::0.0))

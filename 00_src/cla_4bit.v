@@ -11,17 +11,13 @@ module cla_4bit(
     always @(*) begin
         p = a ^ b; // Propagate
         g = a & b; // Generate
-    end
     
-    always @(*) begin 
         c[0] = cin;
         c[1] = g[0] | (p[0] & c[0]);
         c[2] = g[1] | (p[1] & g[0]) | (p[1] & p[0] & c[0]);
         c[3] = g[2] | (p[2] & g[1]) | (p[2] & p[1] & g[0]) | (p[2] & p[1] & p[0] & c[0]);
+    
+        s = p ^ c; // Sum
     end
-
-    
-    assign   s = p ^ c; // Sum
-    
 
 endmodule

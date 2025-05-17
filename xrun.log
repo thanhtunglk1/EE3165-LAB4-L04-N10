@@ -1,6 +1,6 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
 xrun: *W,FMDEF: The default file type mapping of .sv is being overwritten.
-TOOL:	xrun(64)	20.09-s001: Started on May 15, 2025 at 07:52:24 EDT
+TOOL:	xrun(64)	20.09-s001: Started on May 17, 2025 at 05:34:34 EDT
 xrun
 	-gui
 	+xm64bit
@@ -21,7 +21,7 @@ xcelium>
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
 xcelium> database -open waves -into waves.shm -default
 Created default SHM database waves
-xcelium> probe -create -shm testbench.wrapper.counter_4bit.clk testbench.wrapper.counter_4bit.rst_n testbench.wrapper.counter_4bit.sel testbench.wrapper.counter_4bit.out
+xcelium> probe -create -shm testbench.wrapper.clk testbench.wrapper.count testbench.wrapper.count_reg testbench.wrapper.rst_n testbench.wrapper.sel testbench.wrapper.sel_reg
 Created probe 1
 xcelium> run
 xmsim: *W,SHMOFU: $shm_open - file waves.shm already in use (SHM database).
@@ -233,4 +233,6 @@ VALUE: 1110
 COUNTER TEST DONE
 Simulation complete via $finish(1) at time 7780 NS + 0
 ./01_tb/testbench.v:82         $finish;
-xcelium> 
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on May 17, 2025 at 05:35:11 EDT  (total: 00:00:37)
