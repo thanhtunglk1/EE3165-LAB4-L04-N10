@@ -1531,3 +1531,4 @@ Warning : The filename, column and line number information will not be available
         : The attribute for getting HDL filename and line number is not set.
         : You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate) to enable filename, column, and line number tracking in the datapath report.
 WARNING: This version of the tool is 3472 days old.
+Normal exit.
